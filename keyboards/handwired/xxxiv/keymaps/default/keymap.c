@@ -6,12 +6,12 @@ extern keymap_config_t keymap_config;
 /* LAYERS */
 #define _BASE 0
 #define _NUM  1
-#define _SYM  2
+#define _SYS  2
 #define _FUN  3
 
 /* Layer switching */
 #define BS_NUM LT(_NUM, KC_BSPC)
-#define ESC_SYM LT(_SYM, KC_ESC)
+#define ESC_SYS LT(_SYS, KC_ESC)
 #define ENT_FUN LT(_FUN, KC_ENT)
 
 /* MOD-TAP Keys */
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q, KC_W, KC_E, KC_R,    KC_T,   KC_Y,   KC_U, KC_I,    KC_O,   KC_P,
     CT_A, AL_S, GU_D, SH_F,    KC_G,   KC_H,   SH_J, GU_K,    AL_L,   CT_QUOT,
     CT_Z, AL_X, GU_C, KC_V,    KC_B,   KC_N,   KC_M, GU_COMM, AL_DOT, CT_SLSH,
-                      ESC_SYM, BS_NUM, SH_SPC, ENT_FUN
+                      ESC_SYS, BS_NUM, SH_SPC, ENT_FUN
   ),
   
   [_NUM] = KEYMAP(
@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                __,      __,      __,      __
   ),
 
-  [_SYM] = KEYMAP(
+  [_SYS] = KEYMAP(
     KC_GRV,  KC_TILD, __,      RESET,    KC_MUTE, KC_VOLD, KC_VOLU, KC_MRWD, KC_MPLY, KC_MFFD,
     GUI_A,   KC_CAPS, KC_DEL,  __,       KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
     GUI_Z,   GUI_X,   GUI_C,   GUI_V,    __,      __,      __,      KC_LCBR, KC_RCBR, KC_TAB,
