@@ -22,42 +22,6 @@ extern keymap_config_t keymap_config;
 #define ESC_SYS LT(_SYS, KC_ESC)
 #define ENT_FUN LT(_FUN, KC_ENT)
 
-/* MOD-TAP Keys */
-
-// CTRL
-#define CT_A CTL_T(KC_A)
-#define CT_QUOT CTL_T(KC_QUOT)
-#define CT_Z CTL_T(KC_Z)
-#define CT_SCLN CTL_T(KC_SCLN)
-#define CT_SLSH CTL_T(KC_SLSH)
-
-// ALT
-#define AL_S ALT_T(KC_S)
-#define AL_L ALT_T(KC_L)
-#define AL_X ALT_T(KC_X)
-#define AL_DOT ALT_T(KC_DOT)
-#define AL_EQL ALT_T(KC_EQL)
-
-// GUI
-#define GU_D GUI_T(KC_D)
-#define GU_K GUI_T(KC_K)
-#define GU_C GUI_T(KC_C)
-#define GU_COMM GUI_T(KC_COMM)
-#define GU_MINS GUI_T(S(KC_MINS))
-
-// SHFT
-#define SH_F SFT_T(KC_F)
-#define SH_J SFT_T(KC_J)
-#define SH_SPC SFT_T(KC_SPC)
-#define SH_1 SFT_T(S(KC_1))
-#define SH_0 SFT_T(KC_0)
-
-/* Shortcuts */
-#define SSC LGUI(LCTL(LSFT(KC_4)))
-
-/* TRNS */
-#define __ KC_TRNS
-
 
 /* Macros */
 enum custom_keycodes {
@@ -65,7 +29,16 @@ enum custom_keycodes {
   M_2,
   M_3,
   M_4,
-  M_5
+  M_5,
+  M_6,
+  M_7,
+  M_8,
+  M_9,
+  M_10,
+  M_11,
+  M_12,
+  M_13,
+  M_14
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -97,33 +70,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Base mode - alphas, mod_tap, layer_tap keys
   [_BASE] = KEYMAP(
-    KC_Q, KC_W, KC_E, KC_R,    KC_T,   KC_Y,   KC_U, KC_I,    KC_O,   KC_P,
-    CT_A, AL_S, GU_D, SH_F,    KC_G,   KC_H,   SH_J, GU_K,    AL_L,   CT_QUOT,
-    CT_Z, AL_X, GU_C, KC_V,    KC_B,   KC_N,   KC_M, GU_COMM, AL_DOT, CT_SLSH,
-                      ESC_SYS, BS_NUM, SH_SPC, ENT_FUN
+    KC_Q,         KC_W,         KC_E,         KC_R,           KC_T,   KC_Y,           KC_U,         KC_I,           KC_O,           KC_P,
+    CTL_T(KC_A),  ALT_T(KC_S),  GUI_T(KC_D),  SFT_T(KC_F),    KC_G,   KC_H,           SFT_T(KC_J),  GUI_T(KC_K),    ALT_T(KC_L),    CTL_T(KC_QUOT),
+    CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  SFT_T(KC_V),    KC_B,   KC_N,           SFT_T(KC_M),  GUI_T(KC_COMM), ALT_T(KC_DOT),  CTL_T(KC_SLSH),
+                                              ESC_SYS,        BS_NUM, SFT_T(KC_SPC),  ENT_FUN
   ),
 
-  // System mode - media, navigation keys
+  // System mode - media, navigation keys, macros 1-7
   [_SYS] = KEYMAP(
-    KC_GRV,  KC_TILD, __,      RESET,   KC_MUTE, KC_VOLD, KC_VOLU, KC_MRWD, KC_MPLY, KC_MFFD,
-    KC_TAB,  KC_CAPS, KC_BSPC, KC_DEL,  KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
-    KC_ENT,  __,      __,      __,      __,      __,      __,      KC_LCBR, KC_RCBR, KC_TAB,
-                               TG_SYS,  TG_NUM,  TG_GAM,  TG_FUN
+    KC_GRV,  KC_TILD, KC_TRNS, RESET,   KC_MUTE,  KC_VOLD, KC_VOLU, KC_MRWD, KC_MPLY, KC_MFFD,
+    KC_TAB,  KC_CAPS, KC_BSPC, KC_DEL,  KC_HOME,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
+    M_1,     M_2,     M_3,     M_4,     M_5,      M_6,     M_7,     KC_LCBR, KC_RCBR, KC_TAB,
+                               TG_SYS,  TG_NUM,   TG_GAM,  TG_FUN
   ),
   
   // Number mode - numbers and symbols
   [_NUM] = KEYMAP(
-    KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-    SH_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    SH_0,
-    CT_SCLN, AL_EQL,  GU_MINS, KC_PLUS, KC_UNDS, KC_COLN, KC_QUES, KC_LBRC, KC_RBRC, KC_BSLS,
-                               TG_NUM,  KC_BSPC, KC_SPC,  TG_FUN
+    KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC, KC_CIRC, KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_RPRN,
+    CTL_T(KC_1),    ALT_T(KC_2),    GUI_T(KC_3),    SFT_T(KC_4),    KC_5,    KC_6,    SFT_T(KC_7),    GUI_T(KC_8),    ALT_T(KC_9),    CTL_T(KC_0),
+    CTL_T(KC_SCLN), ALT_T(KC_EQL),  GUI_T(KC_MINS), SFT_T(KC_PLUS), KC_UNDS, KC_COLN, SFT_T(KC_QUES), GUI_T(KC_LBRC), ALT_T(KC_RBRC), CTL_T(KC_BSLS),
+                                                    TG_NUM,         KC_BSPC, KC_SPC,  TG_FUN
   ),
 
-  // Function mode - all the 'F' keys, duplicate navigation arrows
+  // Function mode - all the 'F' keys, duplicate navigation arrows, macros 8-14
   [_FUN] = KEYMAP(
     KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
-    KC_F11,  KC_F12,  SSC,     KC_F14,   KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
-    M_1,     M_2,     M_3,     M_4,      M_5,     __,      __,      KC_LCBR, KC_RCBR, KC_SLSH,
+    KC_F11,  KC_F12,  KC_F13,  KC_F14,   KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
+    M_8,     M_9,     M_10,    M_11,     M_12,    M_13,    M_14,    KC_LCBR, KC_RCBR, KC_SLSH,
                                TG_FUN,   TG_NUM,  KC_SPC, TG_FUN
   ),
 
