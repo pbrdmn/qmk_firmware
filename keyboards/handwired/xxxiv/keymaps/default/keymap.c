@@ -27,58 +27,71 @@ extern keymap_config_t keymap_config;
 // CTRL
 #define CT_A CTL_T(KC_A)
 #define CT_QUOT CTL_T(KC_QUOT)
-
 #define CT_Z CTL_T(KC_Z)
-#define CT_TAB CTL_T(KC_TAB)
 #define CT_SCLN CTL_T(KC_SCLN)
 #define CT_SLSH CTL_T(KC_SLSH)
-#define CT_BSLS CTL_T(KC_BSLS)
 
 // ALT
 #define AL_S ALT_T(KC_S)
 #define AL_L ALT_T(KC_L)
-
 #define AL_X ALT_T(KC_X)
 #define AL_DOT ALT_T(KC_DOT)
 #define AL_EQL ALT_T(KC_EQL)
-#define AL_RBRC ALT_T(KC_RBRC)
-#define AL_GT ALT_T(KC_GT)
 
 // GUI
 #define GU_D GUI_T(KC_D)
 #define GU_K GUI_T(KC_K)
-
-#define GU_C GUI_T(KC_C)
-#define GU_C GUI_T(KC_C)
 #define GU_C GUI_T(KC_C)
 #define GU_COMM GUI_T(KC_COMM)
 #define GU_MINS GUI_T(S(KC_MINS))
-#define GU_LBRC GUI_T(KC_LBRC)
-#define GU_LT GUI_T(KC_LT)
 
 // SHFT
 #define SH_F SFT_T(KC_F)
 #define SH_J SFT_T(KC_J)
-
 #define SH_SPC SFT_T(KC_SPC)
-#define SH_A SFT_T(KC_A)
-#define SH_QUOT SFT_T(S(KC_QUOT))
 #define SH_1 SFT_T(S(KC_1))
 #define SH_0 SFT_T(KC_0)
-#define SH_END SFT_T(KC_END)
-
-/* Modified Keys */
-#define GUI_Z LGUI(KC_Z)
-#define GUI_X LGUI(KC_X)
-#define GUI_C LGUI(KC_C)
-#define GUI_V LGUI(KC_V)
-#define GUI_A LGUI(KC_A)
 
 /* Shortcuts */
 #define SSC LGUI(LCTL(LSFT(KC_4)))
 
 /* TRNS */
 #define __ KC_TRNS
+
+
+/* Macros */
+enum custom_keycodes {
+  M_1 = SAFE_RANGE,
+  M_2,
+  M_3,
+  M_4,
+  M_5
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (record->event.pressed) {
+    switch(keycode) {
+      case M_1:
+        SEND_STRING("Testing keyboard macro 1");
+        return false;
+      case M_2:
+        SEND_STRING("Testing keyboard macro 2");
+        return false;
+      case M_3:
+        SEND_STRING("Testing keyboard macro 3");
+        return false;
+      case M_4:
+        SEND_STRING("Testing keyboard macro 4");
+        return false;
+      case M_5:
+        SEND_STRING("Testing keyboard macro 5");
+        return false;
+
+    }
+  }
+
+  return true;
+}; 
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -110,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_FUN] = KEYMAP(
     KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
     KC_F11,  KC_F12,  SSC,     KC_F14,   KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
-    __,      __,      __,      __,       __,      __,      __,      KC_LCBR, KC_RCBR, KC_SLSH,
+    M_1,     M_2,     M_3,     M_4,      M_5,     __,      __,      KC_LCBR, KC_RCBR, KC_SLSH,
                                TG_FUN,   TG_NUM,  KC_SPC, TG_FUN
   ),
 
