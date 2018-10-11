@@ -9,7 +9,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = KEYMAP(
     KC_Q,         KC_W,         KC_E,         KC_R,          KC_T,            KC_Y,           KC_U,         KC_I,           KC_O,           KC_P,
     CTL_T(KC_A),  ALT_T(KC_S),  GUI_T(KC_D),  SFT_T(KC_F),   KC_G,            KC_H,           SFT_T(KC_J),  GUI_T(KC_K),    ALT_T(KC_L),    CTL_T(KC_QUOT),
-    CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  SFT_T(KC_V),   KC_B,            KC_N,           SFT_T(KC_M),  GUI_T(KC_COMM), ALT_T(KC_DOT),  CTL_T(KC_SLSH),
+    CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  KC_V,          KC_B,            KC_N,           KC_M,         GUI_T(KC_COMM), ALT_T(KC_DOT),  CTL_T(KC_SLSH),
                                               LT(1, KC_ESC), LT(2, KC_BSPC),  SFT_T(KC_SPC),  LT(3, KC_ENT)
   ),
 
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [2] = KEYMAP(
     KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC, KC_CIRC, KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_RPRN,
     CTL_T(KC_1),    ALT_T(KC_2),    GUI_T(KC_3),    SFT_T(KC_4),    KC_5,    KC_6,    SFT_T(KC_7),    GUI_T(KC_8),    ALT_T(KC_9),    CTL_T(KC_0),
-    CTL_T(KC_SCLN), ALT_T(KC_EQL),  GUI_T(KC_MINS), SFT_T(KC_PLUS), KC_UNDS, KC_COLN, SFT_T(KC_QUES), GUI_T(KC_LBRC), ALT_T(KC_RBRC), CTL_T(KC_BSLS),
+    CTL_T(KC_SCLN), ALT_T(KC_EQL),  GUI_T(KC_MINS), KC_PLUS,        KC_UNDS, KC_COLN, KC_QUES,        GUI_T(KC_LBRC), ALT_T(KC_RBRC), CTL_T(KC_BSLS),
                                                     TG(2),          KC_BSPC, KC_SPC,  TG(3)
   ),
 
