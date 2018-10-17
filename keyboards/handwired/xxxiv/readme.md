@@ -8,7 +8,9 @@ Keys are arranged in rows of 10, 10, 10, and 4 respectively with the fourth row 
 
 
 Keyboard Maintainer: DustyKeyboard 
+
 Hardware Supported: Custom 
+
 Hardware Availability: Custom 
 
 Make example for this keyboard (after setting up your build environment):
