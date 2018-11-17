@@ -8,10 +8,10 @@ extern keymap_config_t keymap_config;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Base mode - alphas, mod_tap, layer_tap keys
   [0] = LAYOUT_ortho_4x12(
-    KC_Q,         KC_W,         KC_E,         KC_R,        KC_T,  KC_NO,   KC_NO,   KC_Y,    KC_U,          KC_I,             KC_O,           KC_P,          
-    CTL_T(KC_A),  ALT_T(KC_S),  GUI_T(KC_D),  SFT_T(KC_F), KC_G,  KC_NO,   KC_NO,   KC_H,    SFT_T(KC_J),   GUI_T(KC_K),      ALT_T(KC_L),    CTL_T(KC_QUOT), 
-    CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  KC_V,        KC_B,  KC_NO,   KC_NO,   KC_N,    KC_M,          GUI_T(KC_COMM),   ALT_T(KC_DOT),  CTL_T(KC_SLSH), 
-    KC_NO,        KC_NO,        KC_ESC,       MO(1),       MO(2), KC_BSPC, KC_SPC,  KC_RSFT, LT(3, KC_ENT), KC_NO,            KC_NO,          KC_NO
+    KC_Q,         KC_W,         KC_E,         KC_R,        KC_T,  KC_LBRC,    KC_RBRC,    KC_Y,    KC_U,          KC_I,             KC_O,           KC_P,
+    CTL_T(KC_A),  ALT_T(KC_S),  GUI_T(KC_D),  SFT_T(KC_F), KC_G,  S(KC_LBRC), S(KC_RBRC), KC_H,    SFT_T(KC_J),   GUI_T(KC_K),      ALT_T(KC_L),    CTL_T(KC_QUOT),
+    CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  KC_V,        KC_B,  KC_SCLN,    S(KC_SCLN), KC_N,    KC_M,          GUI_T(KC_COMM),   ALT_T(KC_DOT),  CTL_T(KC_SLSH),
+    KC_NO,        KC_NO,        KC_ESC,       MO(1),       MO(2), KC_BSPC,    KC_SPC,     KC_RSFT, LT(3, KC_ENT), KC_NO,            KC_TAB,         KC_ENT
   ),
 
   // System mode - media, navigation keys, macros 1-7
