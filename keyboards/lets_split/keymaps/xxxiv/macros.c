@@ -25,16 +25,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
     switch(keycode) {
       case M_1:
-        SEND_STRING("RedExcelTRSZeroBee");
+        SEND_STRING("");
         return false;
       case M_2:
-        SEND_STRING("46e@Mac");
+        SEND_STRING("");
         return false;
       case M_3:
-        SEND_STRING("46e@Dust");
+        SEND_STRING("");
         return false;
       case M_4:
-        SEND_STRING("Testing keyboard macro 4");
+        SEND_STRING("");
         return false;
       case M_5:
         SEND_STRING("Testing keyboard macro 5");
