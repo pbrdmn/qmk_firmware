@@ -59,10 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // Function mode - all the 'F' keys, duplicate navigation arrows, macros 8-14
   [_FUNC] = LAYOUT_ortho_4x12(
-    KC_F1,  KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_NO, KC_NO,  KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,  KC_F11, KC_F12,
-    KC_F11, KC_F12,  KC_F13,  KC_F14,  KC_HOME, KC_NO, KC_NO,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,
-    M_8,    M_9,     M_10,    M_11,    M_12,    KC_NO, KC_NO,  M_13,     M_14,     KC_LCBR,  KC_RCBR,  KC_SLSH,
-    KC_NO,  KC_NO,   KC_NO,   KC_NO,   TG(3),   TG(2), KC_SPC, TG(3),    KC_NO,    KC_NO,    KC_NO,   KC_NO
+    KC_F1,      KC_F2,        KC_F3,        KC_F4,        KC_F5,         KC_F6,           KC_F7,  KC_F8,          KC_F9,            KC_F10,         KC_F11,         KC_F12,
+    KC_ESC,     CTL_T(KC_A),  ALT_T(KC_S),  GUI_T(KC_D),  SFT_T(KC_F),   KC_G,            KC_H,   SFT_T(KC_J),    GUI_T(KC_K),      ALT_T(KC_L),    CTL_T(KC_QUOT), KC_QUOT,
+    KC_LSFT,    CTL_T(KC_Z),  ALT_T(KC_X),  GUI_T(KC_C),  KC_V,          KC_B,            KC_N,   KC_M,           GUI_T(KC_COMM),   ALT_T(KC_DOT),  CTL_T(KC_SLSH), KC_ENT,
+    TG(_GAME),  KC_LCTL,      KC_LALT,      KC_LGUI,      LT(1, KC_ESC), LT(2, KC_BSPC),  KC_SPC, LT(3, KC_ENT),  KC_LEFT,          KC_DOWN,        KC_UP,          KC_RGHT
   ),
 
 };
