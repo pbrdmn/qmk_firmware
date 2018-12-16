@@ -8,8 +8,6 @@
 #define _SYS 3
 #define _FUNC 4
 
-#define Q_ LT
-
 extern keymap_config_t keymap_config;
 #define XXXXXXX KC_NO
 
@@ -37,10 +35,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // Gaming mode - disable mod_tap and layer_tap keys
   [_GAME] = LAYOUT_ortho_4x12(
-    KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
-    KC_ESC,     KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-    KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-    TG(_GAME),  KC_LCTL, KC_LALT, KC_LGUI, KC_ESC,  KC_SPC,  KC_SPC,  KC_ENT,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+    KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
+    KC_ESC,     KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+    KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
+    TG(_GAME),  KC_LCTL, KC_LALT, KC_LGUI, KC_ESC,  KC_SPC,  KC_SPC,  KC_ENT,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
   ),
   
   // Number mode - numbers and symbols
@@ -53,10 +51,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // System mode - media, mouse keys, macros 1-7
   [_SYS] = LAYOUT_ortho_4x12(
-    KC_GRV,   KC_TILD, KC_TRNS,  RESET,   KC_MUTE, KC_NO, KC_NO, KC_VOLD,  KC_VOLU,   KC_MRWD,  KC_MPLY,  KC_MFFD,
-    KC_TILD,  KC_CAPS, KC_BSPC,  KC_DEL,  KC_HOME, KC_NO, KC_NO, KC_LEFT,  KC_DOWN,   KC_UP,    KC_RGHT,  KC_END,
-    M_1,      M_2,     M_3,      M_4,     M_5,     KC_NO, KC_NO, M_6,      TG(5),     KC_LCBR,  KC_RCBR,  KC_TAB,
-    KC_NO,    KC_NO,   KC_NO,    KC_NO,   TG(1),   TG(2), TG(4), TG(3),     KC_NO,    KC_NO,    KC_NO,   KC_NO
+    KC_TAB,   KC_GRV, KC_TILD, KC_TRNS,  RESET,   KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_MRWD,  KC_MPLY,  KC_MFFD,  KC_BSPC,
+    KC_GRV,   KC_TAB, KC_CAPS, KC_BSPC,  KC_DEL,  KC_HOME,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_END,   KC_QUOT,
+    KC_LSFT,  M_1,    M_2,     M_3,      M_4,     M_5,      M_6,      KC_PIPE,  KC_LCBR,  KC_RCBR,  KC_TAB,   KC_ENT,
+    KC_NO,    KC_NO,  KC_NO,   KC_NO,    TG(1),   TG(2),    TG(4),    TG(3),    KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT
   ),
 
   // Function mode - all the 'F' keys, duplicate navigation arrows, macros 8-14
