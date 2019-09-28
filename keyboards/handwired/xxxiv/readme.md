@@ -2,7 +2,7 @@ XXXIV
 =====
 
 XXXIV (34 in roman numerals) is an ortholinear keyboard layout, an extension of Dilly.
-Keys are arranged in rows of 10, 10, 10, and 4 respectively with the fourth row centred.
+Keys are arranged in rows of 10. The fourth row contains 4 centred keys for use as a thumb cluster.
 
 ![XXXIV Keyboard Layout](https://i.imgur.com/OMt1GBl.png)
 

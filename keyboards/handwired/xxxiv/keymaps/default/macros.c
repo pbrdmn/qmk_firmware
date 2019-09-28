@@ -17,16 +17,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
     switch(keycode) {
       case M_1:
-        SEND_STRING("Macro");
+        SEND_STRING("Macro1");
         return false;
       case M_2:
-        SEND_STRING("Macro");
+        SEND_STRING("Macro2");
         return false;
       case M_3:
-        SEND_STRING("Macro");
+        SEND_STRING("Macro3");
         return false;
       case M_4:
-        SEND_STRING("Macro");
+        SEND_STRING("Macro4");
         return false;
       case M_5:
         SEND_STRING("http://www.keyboard-layout-editor.com/#/gists/bcad6264dffcbd81bf6376ffe14ca149");
@@ -38,4 +38,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
 
   return true;
-}; 
+};

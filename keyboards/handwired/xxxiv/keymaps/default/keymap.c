@@ -15,12 +15,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // System mode - media, navigation keys, macros 1-7
   [1] = KEYMAP(
-    KC_GRV,  KC_TILD,   KC_TRNS,  RESET,   KC_MUTE,  KC_VOLD,  KC_VOLU,   KC_MRWD,  KC_MPLY,  KC_MFFD,
-    KC_TAB,  KC_CAPS,   KC_BSPC,  KC_DEL,  KC_HOME,  KC_LEFT,  KC_DOWN,   KC_UP,    KC_RGHT,  KC_END,
-    M_1,     M_2,       M_3,      M_4,     M_5,      M_6,      KC_PIPE,   KC_LCBR,  KC_RCBR,  KC_TAB,
-                                  TG(1),   TG(2),    TG(4),    TG(3)
+    KC_GRV,     KC_TILD,    KC_TRNS,    RESET,        KC_MUTE,  KC_VOLD,  KC_VOLU,   KC_MRWD,  KC_MPLY,  KC_MFFD,
+    KC_TAB,     KC_CAPS,    KC_BSPC,    KC_DEL,       KC_HOME,  KC_LEFT,  KC_DOWN,   KC_UP,    KC_RGHT,  KC_END,
+    LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V),   M_5,      M_6,      KC_PIPE,   KC_LCBR,  KC_RCBR,  KC_TAB,
+                                        TG(1),        TG(2),    TG(4),    TG(3)
   ),
-  
+
   // Number mode - numbers and symbols
   [2] = KEYMAP(
     KC_EXLM,          KC_AT,          KC_HASH,          KC_DLR,       KC_PERC,  KC_CIRC,  KC_AMPR,      KC_ASTR,          KC_LPRN,          KC_RPRN,
